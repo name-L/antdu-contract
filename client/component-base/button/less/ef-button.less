@@ -1,0 +1,248 @@
+@import "../../../asset//less/base-import.less";
+
+@confirmColor: @btn_okBgColor;
+@confirmHoverColor: @btn_hover_okBgColor;
+@confirmFontColor: @btn_okFontColor;
+
+@cancelColor: @btn_cancelBgColor;
+@cancelHoverColor: @btn_hover_cancelBgColor;
+@cancelFontColor:  @btn_cancelFontColor;
+
+.ef-button {
+  display: inline-block;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  background: #fff;
+  border: 1px solid #bfcbd9;
+  color: #1f2d3d;
+  text-align: center;
+  outline: none;
+  margin: 0;
+  padding: 10px 15px;
+  font-size: 14px;
+  box-sizing: border-box;
+  //border-radius: 2px;
+  -webkit-appearance: none;
+
+  &.is-disabled {
+    background: #ddd;
+    border-color: #ddd;
+      &:focus, &:hover {
+          background: #ddd;
+          color: #fff;
+          border-color: #ddd;
+      }
+  }
+
+  &:focus, &:hover {
+    color: #20a0ff;
+    border-color: #20a0ff;
+  }
+
+  &:active {
+    color: #1d90e6;
+    border-color: #1d90e6;
+    outline: none
+  }
+
+  &.is-loading {
+    position: relative;
+    pointer-events: none;
+
+    &:before {
+      pointer-events: none;
+      content: "";
+      position: absolute;
+      left: -1px;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      border-radius: inherit;
+      background-color: hsla(0, 0%, 100%, .35)
+    }
+
+  }
+
+  .iconfont {
+    font-size: inherit;
+    display: inline-block;
+  }
+
+  .icon-loading {
+    animation: efRotating 1s linear infinite;
+  }
+
+
+}
+
+@keyframes efRotating {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+//.ef-button + .ef-button {
+//  margin-left: 7px;
+//}
+
+.ef-button-mini {
+  padding: 4px;
+  font-size: 12px;
+}
+
+.ef-button-small {
+  padding: 5px 9px;
+  font-size: 12px;
+}
+
+.ef-button-medium {
+  padding: 5px 20px;
+  font-size: 14px;
+}
+
+.ef-button-middle {
+  padding: 7px 20px;
+  font-size: 14px;
+}
+
+.ef-button-large {
+  padding: 11px 19px;
+  font-size: 16px;
+}
+
+.ef-button-default {
+
+}
+
+.ef-button-confirm {
+  color: @confirmFontColor;
+  background-color: @confirmColor;
+  border-color: @confirmColor;
+
+  &:focus, &:hover {
+    background: @confirmHoverColor;
+    border-color: @confirmHoverColor;
+    color: @confirmFontColor;
+  }
+
+  &.is-active {
+    background: @confirmColor;
+    border-color: @confirmColor;
+    color: @confirmFontColor;
+  }
+}
+
+.ef-button-cancel {
+  color: @cancelFontColor;
+  background-color: @cancelColor;
+  border-color: @cancelColor;
+
+  &:focus, &:hover {
+    background: @cancelHoverColor;
+    border-color: @cancelHoverColor;
+    color: @cancelFontColor;
+  }
+
+  &.is-active {
+    background: @cancelColor;
+    border-color: @cancelColor;
+    color: @cancelFontColor;
+  }
+}
+
+.ef-button-primary {
+  color: #fff;
+  background-color: #20a0ff;
+  border-color: #20a0ff;
+
+  &:focus, &:hover {
+    background: #4db3ff;
+    border-color: #4db3ff;
+    color: #fff
+  }
+
+  &.is-active {
+    background: #1d90e6;
+    border-color: #1d90e6;
+    color: #fff
+  }
+}
+
+.ef-button-success {
+  color: #fff;
+  background-color: #13ce66;
+  border-color: #13ce66;
+
+  &:focus, &:hover {
+    background: #42d885;
+    border-color: #42d885;
+    color: #fff;
+  }
+
+  &.is-active {
+    background: #11b95c;
+    border-color: #11b95c;
+    color: #fff;
+  }
+}
+
+.ef-button-warning {
+  color: #fff;
+  background-color: #f7ba2a;
+  border-color: #f7ba2a;
+
+  &:focus, &:hover {
+    background: #f9c855;
+    border-color: #f9c855;
+    color: #fff;
+  }
+
+  &.is-active {
+    background: #dea726;
+    border-color: #dea726;
+    color: #fff
+  }
+}
+
+.ef-button-info {
+  color: #fff;
+  background-color: #50bfff;
+  border-color: #50bfff;
+
+  &:focus, &:hover {
+    background: #73ccff;
+    border-color: #73ccff;
+    color: #fff;
+  }
+
+  &.is-active {
+    background: #48ace6;
+    border-color: #48ace6;
+    color: #fff
+  }
+
+}
+
+.ef-button-danger {
+  color: #fff;
+  background-color: #ff4949;
+  border-color: #ff4949;
+
+  &:focus, &:hover {
+    background: #ff6d6d;
+    border-color: #ff6d6d;
+    color: #fff;
+  }
+
+  &.is-active {
+    background: #e64242;
+    border-color: #e64242;
+    color: #fff;
+  }
+
+}

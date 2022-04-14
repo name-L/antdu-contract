@@ -1,0 +1,3 @@
+{{data-script}}
+</head>
+<body>

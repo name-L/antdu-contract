@@ -1,0 +1,347 @@
+@charset "utf-8";
+@import "../../../asset/less/base-import.less";
+@navbarBackground: white;
+@arrowBackgroung: white;
+@zindeSlide: 99;
+.navBtnPosition(@row, @col) {
+    .navRichBtnPosition(@row, @col, 36, 36);
+}
+.QR-code-container{
+    padding: 10px;
+    width: 260px;
+    height: 260px;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+.navPanel {
+    transition: all .3s ease;
+    position: relative;
+    width: 60px;
+    margin-right: 3px;
+    height: 100%;
+    text-align: left;
+    background: @navbarBackground;
+    z-index: @zindeSlide + 1;
+    .open-navigation {
+        width: 30px;
+        height: 30px;
+        background: @navbarBackground;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        .arrow {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+            // background-color: @arrowBackgroung;
+            transform: translateY(20%) translateX(20%);
+            .double-arrow {
+                width: 10px;
+                height: 10px;
+                margin: 6px;
+                background-image: url(../../../../asset/image/common/open-navigation.svg);
+            }
+        }
+    }
+    .sys-logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 60px;
+        width: 60px;
+        z-index: 1000;
+        transition: all .3s ease;
+        .system-title {
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+            line-height: 60px;
+        }
+        .eagok-logo-img {
+            width: 100%;
+            height: 100%;
+        }
+        .default-logo-img {
+            width: 100%;
+            height: 100%;
+            // background: @logoBackground url(../../../../asset/image/common/eagboy-logo-blue.png) no-repeat;
+        }
+    }
+
+    .menuNavList {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        .navBtn {
+            position: relative;
+            display: block;
+            padding: 20px 15px;
+            cursor: pointer;
+            width: 60px;
+            .box-sizing(border-box);
+
+            .iconfont {
+                font-size: 24px;
+                color: #fff;
+
+                &.icon-dailiguanli {
+                    font-size: 22px;
+                }
+            }
+
+            &:after {
+                content: '';
+                display: none;
+                width: 2px;
+                height: 55px;
+                background: #65B2E3;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            &:HOVER, &.active {
+                .iconfont, .title {
+                    color: #65B2E3;
+                }
+            }
+            .title {
+                width: 120px;
+                position: absolute;
+                top: 20px;
+                left: 50px;
+                font-size: 12px;
+                // color: @inputAppendColor;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                white-space:nowrap;
+                &:HOVER, &.active{
+                    // color: @contentBackground;
+                    &.icon-youjiantou {
+                        // color: @inputAppendColor;
+                    }
+                }
+               .title-word {
+                   font-size: 14px;
+                   padding-right: 5px;
+               }
+            }
+            .icon-youjiantou {
+                display: none;
+            }
+            &.active {
+                &:after {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .systemNavList {
+        position: absolute;
+        bottom: 15px;
+        width: 60px;
+        left: 0;
+        .systemCode, .systemUser, .eagok-link, .notice, .customer-online{
+            .i-word {
+               display: none;
+            }
+        }
+        .customer-online {
+            position: absolute;
+            bottom: 97px;
+            left: 0;
+            height: 36px;
+            cursor: pointer;
+            .iconfont {
+                font-size: 22px;
+                color: #fff;
+            }
+            &:hover, &.hover {
+                .iconfont {
+                    color: #65B2E3;
+                }
+                .i-word {
+                    color: #65B2E3;
+                }
+            }
+        }
+        .systemCode {
+            position: absolute;
+            bottom: 97px;
+            left: 0;
+            height: 36px;
+            cursor: pointer;
+            .iconfont {
+                font-size: 22px;
+                color: #fff;
+            }
+            &:hover, &.hover {
+                .iconfont {
+                    color: #65B2E3;
+                }
+            }
+        }
+        .notice {
+            position: absolute;
+            bottom: 197px;
+            left: 0;
+            height: 36px;
+            cursor: pointer;
+            .iconfont {
+                font-size: 22px;
+                color: #fff;
+            }
+            &:hover, &.hover {
+                .iconfont {
+                    color: #65B2E3;
+                }
+                .i-word {
+                    color: #65B2E3;
+                }
+            }
+            .system-notice-tips {
+                background-color: red;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                position: absolute;
+                top: -5px;
+                left: 30px;
+            }
+        }
+        .eagok-link {
+            position: absolute;
+            bottom: 47px;
+            left: 0;
+            height: 36px;
+            cursor: pointer;
+            .iconfont {
+                font-size: 22px;
+                color: #ffffff;
+            }
+            &:hover, &.hover {
+                .iconfont {
+                    color: #65B2E3;
+                }
+            }
+        }
+        .systemUser {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            cursor: pointer;
+            left: -3px;
+            .ico {
+                padding: 0;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 12px;
+                right: 0;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                //background: none no-repeat scroll center center #fff;
+                &.default {
+                    background-size: 100%;
+                    background-image: url("../../../../asset/image/default_user.png");
+                }
+            }
+        }
+        .systemCode, .systemUser, .eagok-link, .notice, .customer-online{
+            width: 60px;
+            text-align: left;
+            padding-left: 15px;
+        }
+        .systemUser {
+            .ico {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.open-nav {
+    transition: all .3s ease;
+    width: 210px;
+    padding-left: 18px;
+    .open-navigation {
+        left: 90%;
+        .arrow {
+            .double-arrow {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .sys-logo {
+        width: 210px;
+        // background-color: @logoBackground;
+        left: 50%;
+        transform: translate(-50%);
+        .eagok-logo-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            transform: translate(-150%,-54%);
+        }
+        .default-logo-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            transform: translate(-150%,-44%);
+            // background: url(../../../../asset/image/common/eagboy-logo-titile.svg) no-repeat;
+        }
+    }
+    .systemNavList {
+        .systemCode, .systemUser, .eagok-link, .notice, .customer-online{
+            width: 210px;
+            &:HOVER {
+                .i-word {
+                    color: #65B2E3;
+                }
+            }
+            .i-word {
+                display: inline-block;
+                color: #fff;
+                font-size: 14px;
+                padding-left: 10px;
+            }
+        }
+        .systemUser {
+            .i-word {
+                position: absolute;
+                top: 8px;
+                left: 56px;
+                padding-left: 0;
+            }
+        }
+    }
+    .menuNavList {
+        .navBtn {
+            .icon-youjiantou {
+                display: block;
+                position: absolute;
+                top: 22px;
+                right: -130px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+//noinspection CssUnknownTarget
+// @import "./i18n/*.less";

@@ -1,0 +1,81 @@
+@charset "utf-8";
+@import "../../../../asset/less/base-import.less";
+
+.ef-checkbox {
+    font-weight: normal;
+    line-height: 1;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    white-space: nowrap;
+    outline: none;
+    &.is-checked {
+        .ef-checkbox-input {
+            .ef-checkbox-inner {
+                background-color: #5FB3E5;
+                border-color: #5FB3E5;
+                &:after {
+                    transform: rotate(45deg) scaleY(1);
+                }
+            }
+        }
+    }
+    .ef-checkbox-label {
+        font-size: 14px;
+        color: @fontColor;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .ef-checkbox-input {
+        white-space: nowrap;
+        cursor: pointer;
+        outline: none;
+        display: inline-block;
+        line-height: 1;
+        position: relative;
+        vertical-align: middle;
+        .ef-checkbox-inner {
+            border: 1px solid #D0D8EA;
+            background-color: @primaryColor-1;
+            width: 14px;
+            height: 14px;
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+            box-sizing: border-box;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+            transition: border-color .25s cubic-bezier(.71, -.46, .29, 1.46), background-color .25s cubic-bezier(.71, -.46, .29, 1.46);
+            &:hover {
+                border-color: @primaryColor-6;
+            }
+            &:after {
+                box-sizing: content-box;
+                content: "";
+                border: 1px solid;
+                border-color: @inputAppendColor;
+                border-left: 0;
+                border-top: 0;
+                height: 7px;
+                left: 4px;
+                position: absolute;
+                top: 1px;
+                width: 3px;
+                transform: rotate(45deg) scaleY(0);
+                transition: transform .15s cubic-bezier(.71, -.46, .88, .6) .05s;
+                transform-origin: center;
+            }
+        }
+        .ef-checkbox-original {
+            opacity: 0;
+            outline: none;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+        }
+    }
+}
+

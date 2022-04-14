@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.text-overflow() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: normal;
+}
+
+// css3 (目前 autoprefix 好像不支持 device-pixel-ratio ) 2015-12-10
+.bg-image(@width, @height, @img-x1, @img-x2) {
+    background-image: @img-x1;
+    @media //
+    only screen and (-webkit-min-device-pixel-ratio: 2), // webkit
+    only screen and (min--moz-device-pixel-ratio: 2), // moz
+    only screen and (-o-min-device-pixel-ratio: 2/1), // opera
+    only screen and (min-device-pixel-ratio: 2) {
+        background-image: @img-x2;
+        background-size: @width @height;
+    }
+}
+
+// 背景加载滚动动画
+.win8-loading(@positionX: center; @positionY: center; @bgColor: transparent;) {
+    background: @bgColor url("../../image/loading/animated-loader.gif") no-repeat @positionX @positionY;
+}

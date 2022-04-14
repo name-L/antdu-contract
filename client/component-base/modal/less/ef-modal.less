@@ -1,0 +1,137 @@
+@import "../../../asset/less/base-import.less";
+
+
+@maskColor: #2F323A;
+@modalColor: #ffffff;
+@zindexModalMask: 66;
+@zindexModal:67;
+.ef-modal-mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: @maskColor;
+  opacity: .6;
+  height: 100%;
+  z-index: @zindexModalMask;
+}
+
+.ef-modal-wrap {
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: @zindexModal;
+
+  .ef-modal {
+    margin: 0 auto;
+    position: relative;
+    outline: 0;
+    top: 100px;
+    width: auto;
+    background: @modalColor;
+
+    .ef-modal-delete {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+    }
+
+    .ef-modal-header {
+      padding: 14px 16px;
+      line-height: 1;
+    }
+
+    .ef-modal-body {
+      padding: 16px;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .ef-modal-footer {
+      padding: 12px 18px;
+      text-align: right;
+    }
+  }
+}
+
+.ef-modal-fade-enter-active,
+.ef-modal-fade-leave-active,
+.ef-modal-ease-enter-active,
+.ef-modal-ease-leave-active {
+  animation-duration: .3s;
+  animation-fill-mode: both;
+  animation-play-state: paused
+}
+
+.ef-modal-fade-enter-active {
+  animation-name: fadeIn;
+  animation-play-state: running
+}
+
+.ef-modal-fade-leave-active {
+  animation-name: fadeOut;
+  animation-play-state: running
+}
+
+.ef-modal-ease-enter-active {
+  animation-name: easeIn;
+  animation-play-state: running
+}
+
+.ef-modal-ease-leave-active {
+  animation-name: easeOut;
+  animation-play-state: running
+}
+
+.ef-modal-fade-enter-active, .ef-modal-ease-enter-active {
+  opacity: 0;
+  animation-timing-function: linear
+}
+
+.ef-modal-fade-leave-active, .ef-modal-ease-leave-active {
+  animation-timing-function: linear
+}
+
+@keyframes easeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes easeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

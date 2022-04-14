@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+@normal-font-size: 14px;
+
+/**
+ * 公共变量
+ */
+@systemBlue: #5596FF;
+@systemPurple: #937DFF;
+@systemRed: #FD768F;
+
+@efScrollarColor: rgba(85, 150, 255, 0.3);
+@efScrollarHoverColor: rgba(85, 150, 255, 0.3);
+
+@titleBackgroundColor: rgba(147, 125, 255, .15);
+@dialogBackgroundColor: rgba(85, 150, 255, .3);
+
+@hoverColor: rgba(147, 125, 255, 0.3);
+@listChoseColor: linear-gradient(to right, rgba(147, 125, 255, 0.15), rgba(147, 125, 255, 0));
+@bgColor: linear-gradient(30deg, #0F1851, #294273);
+@contentBgColor: rgba(255, 255, 255, 0.03);
+@borderBottomColor: rgba(255, 255, 255, 0.1);
+
+@pinkGradientColor: linear-gradient(to right, #F37081, #FF9EC3);
+@darkPurpleGradientColor: linear-gradient(to right, #B5407B, #B550AC);
+@yellowGradientColor: linear-gradient(to right, #E38B77, #E4A779);
+@purpleGradientColor: linear-gradient(to right, #7F5EA8, #A7849C);
+@darkBlueGradientColor: linear-gradient(to right, #78B3AD, #A2B49E);
+@blueGradientColor: linear-gradient(to right, #2387F8, #44B7FF);
+@greenGradientColor: linear-gradient(to right, #3EB555, #6ACC5D);
+@lightPurpleGradientColor: linear-gradient(to right, #937DFF, #D7B0FF);
+
+@gradientColorOne: #33CC66;
+@gradientColorTwo: #48EBC3;
+@gradientColorThree: #64C4FF;
+@gradientColorFour: #C9C53D;
+@gradientColorFive: #F2C153;
+@gradientColorSix: #FFA792;
+@gradientColorSeven: #FF5FB3;
+@gradientColorEight: #0BE8FF;
+
+@labelBackgroundColorOne: rgba(100, 196, 255, 0.15);
+@labelBackgroundColorTwo: rgba(51, 204, 102, 0.15);
+@labelBackgroundColorThree: rgba(242, 193, 83, 0.15);
+@labelBackgroundColorFour: rgba(255, 95, 179, 0.15);
+@labelBackgroundColorFive: rgba(255, 167, 146, 0.15);
+@labelBackgroundColorSix: rgba(201, 197, 61, 0.15);
+@labelBackgroundColorSeven: rgba(72, 235, 195, 0.15);
+@labelBackgroundColorEight: rgba(11, 232, 255, 0.15);
+
+@fontColor: #FFFFFF;
+@textFontColor: rgba(255, 255, 255, 0.9);
+@tipFontColor: rgba(255, 255, 255, 0.7);
+
+@numberOneSignBgColor: linear-gradient(to right, #E45499, #E454B5);
+@numberTwoSignBgColor: linear-gradient(to right, #FC834E, #FC9365);
+@numberThreeSignBgColor: linear-gradient(to right, #25BBF5, #45C4F5);
+@otherSignBgColor: rgba(255, 255, 255, 0.15);
+
+// 蚁上树
+@baseBlueColor: #526EF4;
+@baseBackgroundColor:#F6F6FB;
+@baseInputBackground: #F2F4F9;
+
+//按钮更改
+@btn_height: 28px;
+@btn_borderRadiusSize: 4px;
+@btn_okBgColor: #526EF4;
+@btn_okFontColor: #fff;
+@btn_hover_okBgColor: #526EF4;
+@btn_hover_okFontColor: #fff;
+@btn_cancelBgColor: #f08d62;
+@btn_cancelFontColor: #fff;
+@btn_hover_cancelBgColor: #fcaa8d;
+@btn_hover_cancelFontColor: #fff;
+@btn_disabledBgColor: #A8B6F9;
+@btn_disabledBorderColor: #fff;
+@btn_disabledFontColor: #fff;
+
+// 输入框样式 
+@boldColor: #303030;
+
+
+// Box sizing
+.box-sizing(@boxmodel) {
+    -webkit-box-sizing: @boxmodel;
+    -moz-box-sizing: @boxmodel;
+    box-sizing: @boxmodel;
+}
+
+.flex(@flex:1) {
+    -webkit-flex: @flex; /* Safari 6.1 */
+    -ms-flex: @flex; /* IE 10 */
+    flex: @flex;
+}
+
+.regular-size() {
+    padding-left: 70px;
+    padding-right: 70px;
+    width: 1280px;
+    margin: auto;
+    .box-sizing(border-box);
+}
+
+.bg-image(@img-x1, @img-x2) {
+    background: url(@img-x1) no-repeat center center;
+    background-size: 100% 100%;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
+        background: url(@img-x2) no-repeat center center;
+        background-size: 100% 100%;
+    }
+}
+
+.placeholder(@color: @placeholderText) {
+    &:-moz-placeholder {
+        color: @color;
+    }
+    &:-ms-input-placeholder {
+        color: @color;
+    }
+    &::-webkit-input-placeholder {
+        color: @color;
+    }
+}
+
+.displayFlex(@flow:row, @align:stretch, @justify:space-between) {
+    display: -webkit-box; /* 老版本语法: Safari,  iOS, Android browser, older WebKit browsers.  */
+    display: -moz-box; /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox; /* 混合版本语法: IE 10 */
+    display: -webkit-flex; /* 新版本语法： Chrome 21+ */
+    display: flex; /* 新版本语法： Opera 12.1, Firefox 22+ */
+
+    -webkit-flex-flow: @flow;
+    -ms-flex-flow: @flow;
+    flex-flow: @flow;
+
+    -webkit-align-items: @align;
+    -ms-align-items: @align;
+    align-items: @align;
+
+    /*新版本语法*/
+    justify-content: @justify;
+    -ms-justify-content: @justify;
+    -webkit-justify-content: @justify;
+    /*老版本语法*/
+    -webkit-box-pack: @justify;
+    -moz-box-pack: @justify;
+    /*混合版本语法*/
+    -ms-flex-pack: @justify;
+}
+
+.text-overflow-ellipsis() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: normal;
+}

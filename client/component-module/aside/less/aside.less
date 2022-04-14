@@ -1,0 +1,281 @@
+@charset "utf-8";
+@import '../../../asset/less//base-import.less';
+
+.aside {
+    height: 100%;
+    width: 170px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .title {
+        padding-left: 20px;
+        width: 100%;
+        height: 96px;
+        line-height: 40px;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        // box-shadow: 0px 3px 5px 5px rgba(82, 110, 244, 0.1);
+        z-index: 122;
+        .logo {
+            width: 35px;
+            height: 30px;
+            display: inline-block;
+            background: url(../../../asset/image/logo/logo.png) no-repeat center;
+            background-size: 100%;
+            @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+                background: url(../../../asset/image/logo/logo.png) no-repeat center;
+                background-size: 100%;
+            }
+        }
+        .title-content {
+            margin-left: 10px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #303030;
+        }
+        }
+    .aside-content {
+        flex: 1;
+        width: 170px;
+        nav::before {
+            background: none;
+        }
+        .left-nav {
+            width: 100%;
+            div {
+                width: 100%;
+            }
+        }
+    }
+    .nav-button {
+        height: 124px;
+        width: 100%;
+        &::before {
+            background: white;
+        }
+    }
+    .navBtn {
+        width: 209px;
+        height: 50px;
+        padding-left: 20px;
+        display: block;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        &:hover {
+            background: #e8edff;
+        }
+        .theme-title {
+            color: @baseBlueColor;
+            margin-left: 9px;
+        }
+        .task-title {
+            color: #303030;
+            margin-left: 9px;
+        }
+        .theme-icon {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            background: url(../../../asset/image/theme.png) no-repeat center;
+            background-size: 100%;
+            @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+                background: url(../../../asset/image/theme-2x.png) no-repeat center;
+                background-size: 100%;
+            }
+        }
+        .task-icon {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            background: url(../../../asset/image/task.png) no-repeat center;
+            background-size: 100%;
+            @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+                background: url(../../../asset/image/task-2x.png) no-repeat center;
+                background-size: 100%;
+            }
+        }
+    }
+    .checked {
+        background: #e8edff;
+    }
+    .foot-content {
+        width: 100%;
+        // position: absolute;
+        // left: 0;
+        // bottom: 0;
+        cursor: pointer;
+        .user {
+            padding-bottom: 20px;
+            .user-content {
+                width: 100%;
+                height: 50px;
+                padding: 17px 20px 0 20px;
+                color: #303030;
+                &:hover {
+                    background-color: #f6f6fb;
+                }
+            }
+            i {
+                width: 16px;
+                height: 16px;
+                margin-right: 9px;
+                display: inline-block;
+                background: url(../../../asset/image/icon/user.png) no-repeat center;
+                background-size: 100%;
+                @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+                    background: url(../../../asset/image/icon/user-2x.png) no-repeat center;
+                    background-size: 100%;
+                }
+            }
+        }
+        .tool {
+            padding:10px 0 10px 0;
+            height: 70px;
+            line-height: 70px;
+            border-top: 2px solid #f1f4ff;
+            .tool-content {
+                width: 100%;
+                height: 100%;
+                padding-left: 20px;
+                display: flex;
+                align-items: center;
+                color: #303030;
+                &:hover{
+                    background: #f6f6fb;
+                }
+            }
+            a {
+                color: #000;
+            }
+            i {
+                width: 16px;
+                height: 16px;
+                margin-left: 4px;
+                display: inline-block;
+                background: url(../../../asset/image/icon/download.png) no-repeat center;
+                background-size: 100%;
+                @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+                    background: url(../../../asset/image/icon/download-2x.png) no-repeat center;
+                    background-size: 100%;
+                }
+            }
+        }
+        .quit {
+            position: absolute;
+            right: -97px;
+            bottom: 80px;
+            cursor: pointer;
+            z-index: 777;
+            background-color: white;
+            .quit-button {
+                display: block;
+                text-align: center;
+                line-height: 70px;
+                width: 136px;
+                height: 70px;
+                background: #FFFFFF;
+                box-shadow: 0px 3px 5px 1px rgba(82, 110, 244, 0.1);
+                border-radius: 2px;
+                .quit-img {
+                    width: 16px;
+                    height: 16px;
+                    vertical-align: middle;
+                    font-weight: 700;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .downloadTool {
+            width: 300px;
+            height: 100px;
+            padding: 20px;
+            z-index: 777;
+            position: absolute;
+            bottom: 20px;
+            left: 150px;
+            color: #303030;
+            background: white;
+            box-shadow: 0px 3px 5px 1px rgba(82, 110, 244, 0.1);
+            border-radius: 2px;
+            .button-group {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                 .windows-button {
+                width: 80px;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                border-radius: 2px;
+                &:hover {
+                    background: #F8F9FC;
+                }
+                i {
+                    width: 28px;
+                    height: 28px;
+                    background: url(../../../asset/image/icon/window-icon2x.png) no-repeat center;
+                    background-size: 100%;
+                    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+                        background: url(../../../asset/image/icon/windows-icon.png) no-repeat center;
+                        background-size: 100%;
+                    }
+                }
+            }
+            .mac-button {
+                width: 80px;
+                height: 60px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: 2px;
+                margin-left: 10px;
+                &:hover {
+                    background: #F8F9FC;
+                }
+                i {
+                    width: 28px;
+                    height: 28px;
+                    background: url(../../../asset/image/icon/mac-icon.png) no-repeat center;
+                    background-size: 100%;
+                    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+                        background: url(../../../asset/image/icon/mac-icon@2x.png) no-repeat center;
+                        background-size: 100%;
+                    }
+                }
+            }
+            .linux-button {
+                width: 80px;
+                height: 60px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2px;
+                margin-left: 10px;
+                &:hover {
+                    background: #F8F9FC;
+                }
+                i {
+                    width: 28px;
+                    height: 28px;
+                    background: url(../../../asset/image/icon/linux-icon.png) no-repeat center;
+                    background-size: 100%;
+                    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+                        background: url(../../../asset/image/icon/linux-icon2x.png) no-repeat center;
+                        background-size: 100%;
+                    }
+                }
+            } 
+            }
+          
+        }
+    }
+}

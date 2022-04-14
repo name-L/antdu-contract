@@ -1,0 +1,87 @@
+@charset "utf-8";
+@import "../../../asset/less/base-import.less";
+
+.ef-input {
+  position: relative;
+  font-size: 14px;
+  display: inline-block;
+  //width: 100%;
+  border-collapse: separate;
+
+  .ef-input-inner {
+    font-size: inherit;
+    height: 32px;
+    line-height: 1;
+    padding: 3px 10px;
+    width: 100%;
+    background-color: white;
+
+    &.ef-input-mini {
+      height: 22px;
+    }
+
+    &.ef-input-small {
+      height: 32px;
+    }
+
+    &.ef-input-large {
+      height: 42px;
+    }
+  }
+
+  .ef-input-icon + .ef-input-inner {
+    padding-right: 35px;
+  }
+
+  .ef-input-icon {
+    position: absolute;
+    width: 35px;
+    height: 100%;
+    right: 0;
+    top: -8px;
+    text-align: center;
+    color: red;
+    font-size: 14px;
+    transition: transform .3s;
+    transform: translateY(0%) rotate(0);
+    cursor: pointer;
+
+    &:hover {
+      color: yellow;
+    }
+
+    &.is-reverse {
+      transform: translateY(16px) rotate(180deg);
+    }
+
+    &:after {
+      content: "";
+      height: 100%;
+      width: 0;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  .ef-input-append {
+    background-color: yellow;
+    color: red;
+    vertical-align: middle;
+    display: table-cell;
+    position: relative;
+    //border: 1px solid @inputBorderColor;
+    padding: 0 10px;
+    width: 1%;
+    white-space: nowrap;
+
+    .ef-button {
+      border-color: transparent;
+      background-color: transparent;
+      color: inherit;
+      border-top: 0;
+      border-bottom: 0;
+    }
+  }
+
+}
+

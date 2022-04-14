@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+// 一般覆盖以下几个样式就可很好的展示了
+// width: @input-height * 0.6;
+// height: @input-height * 0.6;
+// margin-top: @input-height * 0.4 / 2;
+
+.loader-circle, .loader-circle:after {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+.loader-circle {
+    margin: 0 auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 2px solid rgba(12, 0, 10, 0.2);
+    border-right: 2px solid rgba(12, 0, 10, 0.2);
+    border-bottom: 2px solid rgba(12, 0, 10, 0.2);
+    border-left: 2px solid #0c000a;
+    transform: translateZ(0);
+    animation: load-circle 1.4s infinite linear;
+}
+
+@keyframes load-circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+body,
+html {
+    transition: all 320ms linear;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.system-container {
+    width: 100%;
+    height: 100%;
+    .body-area {
+        // display: flex;
+        height: 100%;
+        justify-content: space-between;
+        .body-right {
+            min-width: 700px;
+            flex: 1;
+            background-color: @baseBackgroundColor;
+        }
+    }
+}
+@import '../../asset/less/base-import.less';
+//noinspection CssUnknownTarget
+@import './lang/*.less';

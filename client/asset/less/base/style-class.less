@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+// 禁用文本选择
+.disableSelect {
+    user-select: none;
+}
+
+*.loading {
+    &.center {
+        .win8-loading();
+    }
+    &.top70px {
+        .win8-loading(center, 70px);
+    }
+    &.top20Percent {
+        .win8-loading(center, 20%);
+    }
+}

@@ -1,0 +1,79 @@
+.collapse{
+    height: 360px !important;
+    .content-retrieve{
+        margin-bottom: 14px !important;
+    }
+}
+.block{
+    width: 100%;
+    height: 80px;
+    margin: 20px 0;
+    padding: 20px 0 20px 40px;
+    transition-duration: .3s;
+    background-color: #fff;
+    overflow: hidden;
+    .title{
+        color: #818496;
+        font-size: 14px;
+        margin-right: 28px;
+    }
+    ::v-deep .el-input{
+        width: 854px;
+        margin: 0 10px 0 0;
+    }
+    .content-retrieve{
+        display: flex;
+        align-items: center;
+        transition-duration: .3s;
+        margin-bottom: 20px;
+    }
+    .content-retrieve:nth-child(3),
+    .content-retrieve:nth-child(4){
+        .title{
+            margin-right: 14px;
+        }
+    }
+    /deep/.el-icon-search,/deep/.el-icon-date{
+        color: #818496;
+        font-size: 18px;
+    }
+    .filter-and-reset{
+        padding-left: 87px;
+        button{
+            width: 132px;
+            height: 40px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .filter{
+            background-color: #587cbd;
+            color: #fff;
+            margin-right: 5px;
+        }
+        .reset{
+            color: #587cbd;
+            background: #e5ebf6;
+        }
+    }
+    .fold{
+        cursor: pointer;
+        color: #587cbd;
+        font-size: 14px;
+       i{
+            transition-duration: .3s;
+       }
+       .is-active{
+           transform:rotate(180deg);
+       }
+    }
+    /deep/ .el-input__icon{
+        cursor: pointer;
+    }
+    .export{
+        cursor: pointer;
+        color: #587cbd;
+        font-size: 14px;
+        margin-left: 10px;
+    }
+}

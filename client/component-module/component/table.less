@@ -1,0 +1,162 @@
+.is-active{
+    height: calc(100% - 420px) !important;
+}
+.title{
+    width: 100%;
+    height: calc(100% - 140px);
+    position: relative;
+    background: #fff;
+    ::v-deep .el-table__body-wrapper {
+        height: 94% !important;
+    }
+    ::v-deep .el-table__body-wrapper::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    // 滚动条的滑块
+    ::v-deep .el-table__body-wrapper::-webkit-scrollbar-thumb {
+        // background-color: #ccc;
+        background-color: rgba(85,150,255,.3);
+        border-radius: 6px;
+    }
+    ::v-deep .el-table__body-wrapper::-webkit-scrollbar-thumb:hover {
+        // background-color: #999;
+        background-color: rgba(85,150,255,.7);
+    }
+    .el-table::before{
+        height: 0;
+    }
+    ::v-deep .el-table td.el-table__cell{
+        border: none;
+    }
+    ::v-deep .el-table th{
+        padding: 0;
+        height: 40px;
+        background-color: #82a4d5;
+        color: #fff;
+    }
+    /deep/.has-gutter tr th:nth-child(1) .cell{
+        padding-left: 40px;
+    }
+    /deep/.el-table__body tbody tr td:nth-child(1) .cell{
+        padding-left: 40px;
+    }
+    /deep/.el-table__row .el-table__cell{
+        padding: 8.5px 0;
+    }
+    /deep/ .el-table__row td .cell{
+        white-space:nowrap;//文本设定为不换行
+        overflow:hidden;//元素超出部分隐藏
+        text-overflow:ellipsis;//文本内容超出用'...'代替
+    }
+    /deep/ .el-table__body .el-table_1_column_4 .cell{
+        // max-width: 100px;
+        // text-align: right;
+    }
+    // 点击展开箭头(icon)样式
+    /deep/.el-table__row :nth-last-child(2){
+        .cell{
+            position: relative;
+            z-index: 6;
+            overflow:inherit;
+            margin-left: 25px;
+            .el-icon-arrow-right{
+                z-index: 9;
+                color: #82a4d5;
+                transform:rotate(90deg);
+            }
+            .el-table__expand-icon--expanded{
+                transform: rotate(-180deg)
+            }
+        }
+    }
+    // table 查看合同内容外层盒子样式
+    /deep/.el-table__expanded-cell{
+        padding-left: 40px;
+        background: #f9fafd;
+        padding-bottom: 20px;
+    }
+    // table 查看合同内容展开样式
+    /deep/.demo-table-expand{
+        padding: 0;
+        .el-form-item{
+            margin-right: 0;
+            margin-bottom: 5px;
+            width: 100%;
+            .el-form-item__content{
+                line-height: 30px;
+            }
+        }
+        .el-form-item:last-child{
+            border-top: 1px solid #e7ebf2;
+            padding-top: 10px;
+        }
+        .translate,
+        .el-button--primary{
+            width: 80px;
+            height: 32px;
+            padding: 0;
+            color: #fff;
+            cursor: pointer;
+            background: #5b83d7;
+            border: none;
+            border-radius: 5px;
+            float:right;
+        }
+    }
+    // 查看合同内容 字体样式
+    /deep/.el-table__row :last-child{
+        .cell{
+            padding-left: 28px;
+            color: #82a4d5;
+            span{
+                cursor: pointer;
+            }
+            a{
+                color: #82a4d5;
+                margin-left: 15px; 
+            }
+        }
+    }
+    .end {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        background-color: #fff;
+        z-index: 10;
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        color: #999;
+        
+    }
+    .load {
+        color: blue;
+    }
+    .error-msg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.amount{
+    width: 82px;
+    height: 23px;
+    position: relative;
+    span{
+        position: absolute;
+        z-index: 10;
+        right: 0;
+    }
+}
+/deep/.el-table .el-table__header-wrapper tr .el-table_2_column_18 .cell{
+    padding-left: 15px;
+    white-space: nowrap;
+}
+.showSelectedConditions {
+    height: calc(100% - 198px);
+}

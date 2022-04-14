@@ -1,0 +1,103 @@
+@charset 'Utf-8';
+
+.page-detail {
+    width: 100%;
+    height: 100%;
+    position:relative;
+    color: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family: Source Han Sans CN;
+    background: linear-gradient(to bottom, rgb(240,240,240) 0, rgb(255,255,255) 550px);
+    padding: 20px 0;
+    box-sizing: border-box;
+    /deep/.ef-scrollar-vertical-inner {
+        display: flex;
+        justify-content: center;
+    }
+    .page-detail-content {
+        width: 90%;
+        height: 100%;
+        min-width: 450px;
+        max-width: 1400px;
+        padding: 2rem 2rem 3rem;
+        background-color: white;
+    }
+    .add-title {
+        width: 100%;
+        height: 24px;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        .add-title-content {
+            flex: 1;
+            color: #303030;
+            font-size: 20px;
+        }
+        .cancel-button {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+                background: #f8f9fc;
+                i {
+                    background: url(../../asset/image/icon/close-hover.png) no-repeat center;
+                    background-size: 100%;
+                    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+                        background: url(../../asset/image/icon/close-hover2x.png) no-repeat center;
+                        background-size: 100%;
+                    }
+                }
+            }
+        }
+        i {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            cursor: pointer;
+            background: url(../../asset/image/icon/close.png) no-repeat center;
+            background-size: 100%;
+            @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+                background: url(../../asset/image/icon/close2x.png) no-repeat center;
+                background-size: 100%;
+            }
+        }
+    }
+    .detail-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        .contract-content {
+            width: 80%;
+            max-width: 800px;
+            padding-top: 74px;
+            hr {
+                margin-bottom: 20px;
+            }
+            ul {
+                li {
+                    height: 24px;
+                    line-height: 24px;
+                    display: flex;
+                    justify-content: flex-start;
+                    a {
+                        color: black;
+                        &:hover {
+                            color: #526EF4;
+                        }
+                    }
+                }
+            }
+            .content-body {
+                margin-top: 10px;
+                line-height: 20px;
+            }
+        }
+    }
+}

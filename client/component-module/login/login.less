@@ -1,0 +1,212 @@
+@charset "utf-8";
+@import '../../asset/less//base-import.less';
+@input-height: 36px;
+body,
+html {
+    transition: background 320ms linear;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.wrapper {
+    display: none;
+    &.v {
+        display: block;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url('../../asset/image/login/bg.png') no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+
+.box {
+    width: 420px;
+    min-height: 445px;
+    max-height: 525px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 7px 1px rgba(82, 121, 216, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+   .form-content .login{
+        width: 320px;
+        height: 40px;
+        background: #526EF4;
+        box-shadow: 0px 3px 5px 1px rgba(82, 110, 244, 0.1);
+        border-radius: 2px;
+    }
+    .title {
+        margin: 70px 0 50px 0;
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+        font-family: Source Han Sans CN;
+        font-weight: 500;
+        color: #303030;
+        line-height: 45px;
+        .img {
+            width: 47px;
+            height: 40px;
+            display: inline-block;
+            background: url(../../asset/image/logo/logo.png) no-repeat center;
+            background-size: 100%;
+            @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+                background: url(../../asset/image/logo/logo.png) no-repeat center;
+                background-size: 100%;
+            }
+        }
+        .label{
+            margin-left: 15px;
+            font-size: 36px;
+            font-family: Source Han Sans CN;
+            font-weight: 500;
+            color: #303030;
+        }
+    }
+    .form-content {
+        padding-left: 50px;
+        height: 64%;
+        width: 100%;
+        max-height: 400px;
+        position: relative;
+        .input-item {
+            display: block;
+            height: 30px;
+            text-align: left;
+            line-height: 30px;
+            margin-top: 15px;
+            line-height: 150%;
+            color: #757575;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        input {
+            border-radius: 5px;
+            text-indent: 5px;
+            outline: none;
+            border: none;
+            min-height: 20px;
+            background-color: #f3f4f9;
+        }
+        input:nth-child(2),
+        .password {
+            width: 320px;
+            height: 40px;
+            background: #F2F4F9;
+            border-radius: 2px;
+        }
+
+        button {
+            min-height: 30px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 30px;
+            margin-bottom: 70px;
+            width: 320px;
+            height: 40px;
+            background: #526EF4;
+            box-shadow: 0px 3px 5px 1px rgba(82, 110, 244, 0.1);
+            border-radius: 2px;
+        }
+        .no-top{
+            margin: 0 0 70px 0;
+        }
+    }
+
+    .msg {
+        padding-top: 50px;
+        transition: color 320ms linear;
+        color: green;
+    }
+
+    .error {
+        font-size: 14px;
+        font-family: Source Han Sans CN;
+        font-weight: 400;
+        margin: 8px 0;
+        color: red;
+    }
+}
+
+.image{
+    width: 560px;
+    height: 441px;
+    img{
+        width: 560px;
+        height: 441px;
+    }
+}
+.yzm{
+    font-size: 16px;
+    font-weight: 400;
+    color: #757575;
+    margin: 15px 0 10px 0;
+}
+.captcha {
+    overflow: hidden;
+    input {
+        width: 196px;
+        height: 40px;
+        background: #F2F4F9;
+        border-radius: 2px;
+        float: left;
+    }
+    a {
+        width: 60%;
+        box-sizing: border-box;
+        width: 114px;
+        height: 40px;
+        // height: @input-height;
+        text-decoration: none;
+        float: left;
+        img,
+        .error-tip {
+            margin-left: 10px;
+            float: left;
+            width: 114px;
+            height: 40px;
+        }
+        .loading {
+            display: none;
+            box-sizing: border-box;
+            width: @input-height * 0.6;
+            height: @input-height * 0.6;
+            margin-top: @input-height * 0.4 / 2;
+           
+        }
+        .loader-circle {
+             float: right;
+            margin-top: 11px;
+            margin-right: 60px;
+        }
+        .error-tip {
+            width: 30%;
+            font-size: 12px;
+            display: none;
+            color: red;
+            line-height: @input-height;
+            text-align: center;
+            float: right;
+        }
+        &.processing,
+        &.erring {
+            //border-width: 1px;
+            background-color: rgba(255, 255, 255, 0.2);
+            img {
+                // display: none;
+                float: right;
+            }
+        }
+        &.processing .loading {
+            display: block;
+        }
+        &.erring .error-tip {
+            display: block;
+        }
+    }
+}

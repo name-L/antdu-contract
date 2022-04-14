@@ -1,0 +1,118 @@
+@import "../../../../asset/less/base-import";
+
+.ef-message {
+  font-size: 12px;
+  position: fixed;
+  z-index: 10001;
+  width: auto;
+  top: 20px;
+  left: 50%;
+
+  .ef-message-content {
+    position: relative;
+    right: 50%;
+    height: 40px;
+    line-height: 40px;
+    padding-right: 35px;
+    color: #fff;
+    border-radius: 3px;
+    min-width: 200px;
+
+    .iconfont {
+      float: left;
+      margin-left: 15px;
+    }
+
+    &.success {
+      background: #5093e1;
+    }
+
+    &.error {
+      background: #f65177;
+    }
+
+    &.info {
+      background: #50bfff;
+    }
+
+    &.warn {
+      background: #f7ba2a;
+    }
+
+    .content {
+      overflow: hidden;
+      width: auto;
+      display: block;
+      margin-left: 55px;
+    }
+  }
+
+  .ef-message-close {
+    display: block;
+    margin-right: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .iconfont {
+      color: #fff;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.ef-message-fade-enter-active, .ef-message-fade-leave-active {
+  animation-duration: .3s;
+  animation-fill-mode: both;
+  animation-play-state: paused
+}
+
+.ef-message-fade-enter-active {
+  animation-name: moveUpIn;
+  animation-play-state: running
+}
+
+.ef-message-fade-leave-active {
+  animation-name: moveUpOut;
+  animation-play-state: running
+}
+
+.ef-message-fade-enter-active {
+  opacity: 0;
+  animation-timing-function: ease-in-out
+}
+
+.ef-message-fade-leave-active {
+  animation-timing-function: ease-in-out
+}
+
+@keyframes moveUpIn {
+  0% {
+    transform-origin: 0 0;
+    transform: translateY(-100%);
+    opacity: 0
+  }
+
+  to {
+    transform-origin: 0 0;
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+
+@keyframes moveUpOut {
+  0% {
+    transform-origin: 0 0;
+    transform: translateY(0);
+    opacity: 1
+  }
+
+  to {
+    transform-origin: 0 0;
+    transform: translateY(-100%);
+    opacity: 0
+  }
+}

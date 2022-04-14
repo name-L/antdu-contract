@@ -1,0 +1,64 @@
+.ef-table-wrapper {
+  &.ef-table-stripe {
+    .ef-table-tbody {
+      tr:nth-child(2n) {
+        background-color: #fbfbfb;
+      }
+    }
+  }
+
+  .ef-table-content {
+    text-align: center;
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      text-align: left;
+      overflow: hidden;
+
+      td,
+      th {
+        height: 40px;
+        text-align: center;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+        border-bottom: 1px solid #ececec;
+        padding: 0 16px;
+      } 
+      .ef-table-thead {
+        > tr > th {
+          font-weight: 700;
+          text-align: center;
+          background-color: #f7f7f7;
+          white-space: nowrap;
+        }
+      }
+      .ef-table-tbody {
+        transition: all 0.3s;
+        > tr {
+          &.error-tip {
+            background-color: #fff1ec;
+          }
+        }
+        > tr:hover {
+          background-color: #f6fafe;
+        }
+      }
+    }
+    .z-index {
+      z-index: 99;
+    }
+  }
+
+  .ef-table-pagination {
+    position: relative;
+    margin: 16px 0;
+    height: 28px;
+  }
+
+  .no-data-tip {
+    text-align: center;
+    margin-top: 100px;
+  }
+}
